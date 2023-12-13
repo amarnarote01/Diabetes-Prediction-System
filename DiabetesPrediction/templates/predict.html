@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Page</title>
+    <style type = text/css>
+
+        body{
+        background-image:url("{% static 'DiabetesPrediction/images/bg.jpg'%}");
+        background-repeat:no-repeat;
+        background attachment:fixed;
+        background-size:cover;
+        }
+        .main{
+            position:fixed;
+            top:140px;
+            left:410px;
+            width:550px;
+            background-color:#ffffff;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+        }
+        h1{
+        color:#0086b3;
+        font-size:30px;
+        font-weight:bold;
+        }
+        input[type=submit]{
+            background-color:#4dc3ff;
+            border:2px;
+            color:white;
+            padding:8px 16px;
+            cursor:pointer;
+            margin-top:15px;
+        }
+    </style>
+</head>
+<body>
+<div align="center" class="main">
+    <h1>
+        Please enter the following information :
+    </h1>
+    <form action="result" >
+        <table>
+            <tr>
+                <td align="right"> Pregnancies:</td>
+                <td align="left"> <input type = "text" name="Pregnancies"></td>
+            </tr>
+            <tr>
+                <td align="right"> Glucose:</td>
+                <td align="left"> <input type = "text" name="Glucose"></td>
+            </tr>
+            <tr>
+                <td align="right"> Blood Pressure:</td>
+                <td align="left"> <input type = "text" name="Blood_Pressure"></td>
+            </tr>
+            <tr>
+                <td align="right"> Skin Thickness:</td>
+                <td align="left"> <input type = "text" name="Skin_Thickness"></td>
+            </tr>
+            <tr>
+                <td align="right"> Insulin:</td>
+                <td align="left"> <input type = "text" name="Insulin"></td>
+            </tr>
+            <tr>
+                <td align="right"> BMI:</td>
+                <td align="left"> <input type = "text" name="BMI"></td>
+            </tr>
+            <tr>
+                <td align="right"> Diabetes Pedigree function:</td>
+                <td align="left"> <input type = "text" name="Diabetes_Pedigree_Function"></td>
+            </tr>
+            <tr>
+                <td align="right"> Age:</td>
+                <td align="left"> <input type = "text" name="Age"></td>
+            </tr>
+        </table>
+
+        <input type="submit">
+    </form>
+    Result:{{result2}}
+</div>
+</body>
+</html>
